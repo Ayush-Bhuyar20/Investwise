@@ -1,0 +1,90 @@
+/* src/components/MarketMovers/MarketMovers.css */
+.market-movers-section {
+  padding: 6rem 5%;
+  background-color: var(--muted);
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto 4rem auto;
+  max-width: 600px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+}
+
+.movers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mover-card {
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.card-title.gainers { color: #16a34a; }
+.card-title.losers { color: #dc2626; }
+.card-title.volume { color: var(--primary); }
+
+.mover-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mover-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.mover-item .symbol {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.mover-item .price {
+  text-align: right;
+  color: var(--muted-foreground);
+}
+
+.mover-item .change,
+.mover-item .volume-value {
+  text-align: right;
+  font-weight: 600;
+}
+
+.mover-item .change.positive { color: #16a34a; }
+.mover-item .change.negative { color: #dc2626; }
+.mover-item .volume-value { color: var(--foreground); }
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .movers-grid {
+    grid-template-columns: 1fr;
+  }
+}

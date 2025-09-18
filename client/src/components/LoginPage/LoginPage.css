@@ -1,0 +1,26 @@
+/* src/components/LoginPage/LoginPage.css */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.login-card {
+  text-align: center;
+  background-color: var(--background);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.google-signin-button {
+    /* Your styling for the button */
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}

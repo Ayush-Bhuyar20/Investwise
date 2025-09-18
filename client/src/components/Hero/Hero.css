@@ -1,0 +1,139 @@
+/* src/components/Hero/Hero.css */
+.hero-section {
+  padding: 6rem 5%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-text-content h1, .hero-text-content p, .cta-button {
+  /* Text styling remains the same */
+  /* ... (previous styles for text and button) ... */
+}
+
+.hero-text-content h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.hero-text-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  color: var(--muted-foreground);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- New Ticker Styling --- */
+.hero-graphic-content {
+  height: 450px;
+}
+
+.market-ticker-card {
+  background-color: var(--background);
+  border: 1px solid var(--muted);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticker-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.ticker-header h3 {
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+
+.ticker-wrap {
+  flex-grow: 1;
+  overflow: hidden; /* This is crucial */
+  position: relative;
+}
+
+.ticker-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: scroll-ticker 20s linear infinite;
+}
+
+.ticker-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+}
+
+.ticker-item .symbol {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.ticker-item .price {
+  font-weight: 500;
+}
+
+.ticker-item .change {
+  font-weight: 600;
+  min-width: 70px;
+  text-align: right;
+}
+
+.ticker-item .change.positive {
+  color: #16a34a; /* Green */
+}
+
+.ticker-item .change.negative {
+  color: #dc2626; /* Red */
+}
+
+/* --- Ticker Animation --- */
+@keyframes scroll-ticker {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Scroll up by half the height */
+  }
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+  /* ... (previous responsive styles remain the same) ... */
+}

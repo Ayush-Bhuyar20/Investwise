@@ -1,0 +1,80 @@
+/* src/components/MarketNews/MarketNews.css */
+.market-news-section {
+  padding: 6rem 5%;
+  background-color: var(--background); /* White background */
+}
+
+.news-grid {
+  display: grid;
+  /* Creates a responsive grid that fits as many 350px columns as possible */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--muted);
+  overflow: hidden; /* Ensures content stays within rounded corners */
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.news-card-image-placeholder {
+  height: 200px;
+  background-color: var(--muted);
+}
+
+.news-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows footer to stick to the bottom */
+}
+
+.news-category {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  align-self: flex-start; /* Aligns the tag to the left */
+}
+
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+.news-summary {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  border-top: 1px solid var(--muted);
+  padding-top: 1rem;
+  margin-top: auto; /* Pushes meta to the bottom of the card */
+}
