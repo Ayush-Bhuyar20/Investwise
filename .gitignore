@@ -1,0 +1,35 @@
+# --- Global Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Client Build ---
+client/dist/
+client/.vite/
+
+# --- Server Build ---
+server/dist/
+server/.cache/
+
+# --- Logs ---
+*.log
+logs/
+debug.log
+error.log
+
+# --- Environment ---
+client/.env
+server/.env
+.env
+.env.*
+*.local
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Editor Files ---
+.vscode/
+.idea/
+*.swp

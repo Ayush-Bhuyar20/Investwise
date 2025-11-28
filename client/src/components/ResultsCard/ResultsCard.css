@@ -123,3 +123,387 @@
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.recommended-stocks {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.recommended-stocks h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+results-comparison {
+  margin-top: 1rem;
+}
+
+.bar-chart-container {
+  margin-top: 0.4rem;
+}
+
+.results-comparison {
+  margin-top: 1rem;
+}
+
+.bar-chart-container {
+  margin-top: 0.4rem;
+}
+
+/* Premium stock list styling */
+.stocks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.stock-item.premium {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.02),
+      rgba(15, 23, 42, 0.06)
+    );
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.stock-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stock-symbol-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stock-symbol {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.stock-name {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.stock-sector {
+  margin-top: 0.1rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  color: rgba(15, 23, 42, 0.85);
+}
+
+/* Risk pill */
+.stock-risk-pill {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.stock-risk-pill.low {
+  background: rgba(22, 163, 74, 0.12);
+  color: rgba(21, 128, 61, 1);
+}
+
+.stock-risk-pill.medium {
+  background: rgba(234, 179, 8, 0.12);
+  color: rgba(180, 83, 9, 1);
+}
+
+.stock-risk-pill.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: rgba(185, 28, 28, 1);
+}
+
+.stock-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+}
+
+.stock-metrics-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stock-price {
+  font-weight: 700;
+}
+
+.stock-pe {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Momentum strip */
+.stock-momentum-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stock-momentum {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.stock-momentum.bullish {
+  background: rgba(22, 163, 74, 0.12);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.stock-momentum.bearish {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.stock-momentum.neutral {
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.stock-change1m {
+  font-size: 0.75rem;
+}
+
+.stock-change1m.pos {
+  color: rgba(21, 128, 61, 1);
+}
+
+.stock-change1m.neg {
+  color: rgba(185, 28, 28, 1);
+}
+
+.stock-ai-rationale {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  max-width: 260px;
+  text-align: right;
+}
+
+/* Grid layout: 3 cards per row on desktop, wraps on small screens */
+.stock-grid {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+/* Card itself */
+.stock-card {
+  position: relative;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.08),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.6rem;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.stock-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(15, 23, 42, 0.18);
+  border-color: rgba(37, 99, 235, 0.7);
+  background: radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.16),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.03);
+}
+
+/* Header row: symbol/name + role chip */
+.stock-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Already used symbol-line + risk pill classes */
+.stock-symbol-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stock-symbol {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+}
+
+.stock-name {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  margin-top: 0.1rem;
+}
+
+/* Sector pill */
+.stock-sector {
+  margin-top: 0.2rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  color: rgba(15, 23, 42, 0.85);
+}
+
+/* Role chip on the right */
+.stock-role-chip {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  white-space: nowrap;
+}
+
+/* Risk pills (reusing names, but applied to pill) */
+.stock-risk-pill {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.stock-risk-pill.low {
+  background: rgba(22, 163, 74, 0.12);
+  color: rgba(21, 128, 61, 1);
+}
+
+.stock-risk-pill.medium {
+  background: rgba(234, 179, 8, 0.12);
+  color: rgba(180, 83, 9, 1);
+}
+
+.stock-risk-pill.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: rgba(185, 28, 28, 1);
+}
+
+/* Body: price + P/E + short rationale */
+.stock-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stock-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.stock-price {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.stock-pe {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.stock-rationale-snippet {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  /* subtle truncation: 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* On hover, slightly reveal more rationale visually */
+.stock-card:hover .stock-rationale-snippet {
+  -webkit-line-clamp: 6;
+}
+
+/* Footer: momentum + 1M change */
+.stock-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Momentum strip reuse */
+.stock-momentum-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stock-momentum {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.stock-momentum.bullish {
+  background: rgba(22, 163, 74, 0.12);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.stock-momentum.bearish {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.stock-momentum.neutral {
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.stock-change1m {
+  font-size: 0.75rem;
+}
+
+.stock-change1m.pos {
+  color: rgba(21, 128, 61, 1);
+}
+
+.stock-change1m.neg {
+  color: rgba(185, 28, 28, 1);
+}

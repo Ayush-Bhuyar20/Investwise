@@ -123,3 +123,173 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+.ai-advisor-wrapper {
+  margin-top: 1.75rem;
+}
+
+/* Base card */
+.ai-advice-card {
+  margin-top: 0.75rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: 1rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.08),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* Header row with title + pill */
+.ai-advice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-advice-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(37, 99, 235, 0.12);
+  color: rgba(30, 64, 175, 0.95);
+}
+
+.ai-badge::before {
+  content: "✨";
+  font-size: 0.8rem;
+}
+
+.ai-badge.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: rgba(185, 28, 28, 0.95);
+}
+
+.ai-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted-foreground);
+}
+
+/* Small status dot for loading */
+.ai-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.9);
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5);
+  animation: ai-pulse 1.2s infinite;
+}
+
+@keyframes ai-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+/* "AI generated" chip on the right */
+.ai-model-chip {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.02);
+  color: rgba(15, 23, 42, 0.8);
+}
+
+/* Body + text */
+.ai-advice-body {
+  margin-top: 0.5rem;
+}
+
+.ai-advice-text {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  white-space: pre-wrap; /* keep markdown-style line breaks */
+  color: var(--muted-foreground);
+}
+
+/* Footer / disclaimer */
+.ai-advice-footer {
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.6);
+}
+
+.ai-advice-disclaimer {
+  font-size: 0.74rem;
+  color: var(--muted-foreground);
+  opacity: 0.95;
+}
+
+/* Loading + error variants tweak background/border */
+.ai-advice-loading {
+  background: radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.14),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.02);
+  border-color: rgba(37, 99, 235, 0.45);
+}
+
+.ai-advice-error {
+  background: radial-gradient(
+      circle at top left,
+      rgba(239, 68, 68, 0.14),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.02);
+  border-color: rgba(239, 68, 68, 0.45);
+}
+/* Make headings elegant */
+.ai-advice-text h3,
+.ai-advice-text h2,
+.ai-advice-text h4 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #0f172a;
+}
+
+/* Bullet list spacing */
+.ai-advice-text ul {
+  margin: 0.6rem 0;
+  padding-left: 1.3rem;
+}
+
+.ai-advice-text li {
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+
+/* Bold tokens pop more */
+.ai-advice-text strong {
+  color: #111827;
+  font-weight: 700;
+}
