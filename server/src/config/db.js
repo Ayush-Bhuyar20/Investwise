@@ -6,15 +6,11 @@ const connectDB = async () => {
 
   if (!uri) {
     console.error("❌ MONGODB_URI is not set in environment variables");
-    process.exit(1); // crash fast so you see the issue
+    process.exit(1);
   }
 
   try {
-    await mongoose.connect(uri, {
-      // these options are fine for newer mongoose; you can omit if using latest
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(uri); // ⬅️ no options for Mongoose 7+
     console.log("✅ MongoDB connected");
   } catch (error) {
     console.error("❌ MongoDB connection error:", error.message);
